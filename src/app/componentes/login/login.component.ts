@@ -123,7 +123,7 @@ Entrar(){
     // });
     this.isLoading = true;
     setTimeout(() => this.isLoading = false, 8000);
-    this.baseService.getItems("votar/Usuarios").then(users => {
+    this.baseService.getItems("comanda/Usuarios").then(users => {
       // setTimeout(() => this.spinner = false, 2000);
       
       this.usuarios = users;
@@ -160,10 +160,6 @@ Entrar(){
           else if (usuarioLogueado.perfil == "cliente") {
             // this.isLoading = false;
             this.router.navigateByUrl('/cliente'); 
-          }
-          else if (usuarioLogueado.perfil == "presidente") {
-            // this.isLoading = false;
-            this.router.navigateByUrl('/registro'); 
           }
           else
               { 
