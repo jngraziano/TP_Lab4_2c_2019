@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig, MatDialogRef} from '@angular/material';
+import { MatDialog, MatDialogRef} from '@angular/material';
 import { Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
@@ -41,12 +41,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openLoginForm(){
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = false;
-    dialogConfig.hasBackdrop = true;
-    dialogConfig.width = "100%";
-    dialogConfig.autoFocus = true;
-
     if(this.dialogAbierto)
     {
       this.dialog.closeAll();
@@ -55,9 +49,7 @@ export class HeaderComponent implements OnInit {
 
     }
     else{
-      // this.dialog.open(LoginComponent, {hasBackdrop: true, disableClose: false, width:'100%', height:'20%',panelClass: 'midialogEdit' });
-      this.dialog.open(LoginComponent, dialogConfig);
-
+      this.dialog.open(LoginComponent, {hasBackdrop: true, disableClose: false, width:'100%', height:'20%',panelClass: 'midialogEdit' });
 
       this.dialogAbierto = true;
     }

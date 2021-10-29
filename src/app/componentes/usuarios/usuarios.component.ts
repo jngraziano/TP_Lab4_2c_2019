@@ -43,11 +43,11 @@ export class UsuariosComponent implements OnInit {
   eliminOK:boolean = false;
   perfiles = [
     {name: 'admin'},
-    {name: 'presidente'},
-    {name: 'funcionario'},
-    {name: 'auxiliar'},
-    {name: 'fiscal'},
-    {name: 'votante'}
+    {name: 'mozo'},
+    {name: 'cocina'},
+    {name: 'barra'},
+    {name: 'chopera'},
+    {name: 'candy'}
 
   ];
   selectedFile: ImageSnippet;
@@ -104,7 +104,7 @@ export class UsuariosComponent implements OnInit {
     
 //  });
 
-this.baseService.getItems("votar/Usuarios").then(users => {
+this.baseService.getItems("comanda/Usuarios").then(users => {
   // setTimeout(() => this.spinner = false, 2000);
   
   this.listaUsuarios = users;
@@ -145,7 +145,7 @@ this.baseService.getItems("votar/Usuarios").then(users => {
             let usuarioNuev = new Usuario(this.registroForm.get('email').value,this.registroForm.get('clave').value,
             this.registroForm.get('perfil').value,sexoOK,imagen);
             console.log(usuarioNuev); 
-            this.baseService.addItem('votar/Usuarios', usuarioNuev); 
+            this.baseService.addItem('comanda/Usuarios', usuarioNuev); 
             this.usuarioRegistrado = false;
             this.agregoimagenErrorMsg = false;
             this.eliminOK = false;
@@ -251,7 +251,7 @@ this.baseService.getItems("votar/Usuarios").then(users => {
 
 
   suspender(item){
-    this.baseService.getItems("votar/Usuarios").then(users => {
+    this.baseService.getItems("comanda/Usuarios").then(users => {
       // setTimeout(() => this.spinner = false, 2000);
       
      let listausuarios = users;
@@ -267,14 +267,14 @@ this.baseService.getItems("votar/Usuarios").then(users => {
         "estado": "suspendido"
 
       }
-      this.baseService.updateItem('votar/Usuarios', usuarioLogueado.key, objetoEnviar); 
+      this.baseService.updateItem('comanda/Usuarios', usuarioLogueado.key, objetoEnviar); 
       this.TraerTodosLosUsuarios();
     });
     
   }
 
   activar(item){
-    this.baseService.getItems("votar/Usuarios").then(users => {
+    this.baseService.getItems("comanda/Usuarios").then(users => {
       // setTimeout(() => this.spinner = false, 2000);
       
      let listausuarios = users;
@@ -290,14 +290,14 @@ this.baseService.getItems("votar/Usuarios").then(users => {
         "estado": "activo"
 
       }
-      this.baseService.updateItem('votar/Usuarios', usuarioLogueado.key, objetoEnviar); 
+      this.baseService.updateItem('comanda/Usuarios', usuarioLogueado.key, objetoEnviar); 
       this.TraerTodosLosUsuarios();
     });
   }
 
   borrarUsuario(usuario){
     console.log(usuario);
-    this.baseService.removeItem('votar/Usuarios', usuario.key );
+    this.baseService.removeItem('comanda/Usuarios', usuario.key );
 
     this.agregOK = false;
     this.eliminOK = true;
@@ -318,7 +318,7 @@ this.baseService.getItems("votar/Usuarios").then(users => {
     let filename: string = this.registroForm.get('email').value;
     const file: File = this.imagenNueva.files[0];
     const reader = new FileReader();
-    const imageRef = storageRef.child(`votar/Usuarios/${filename}.jpg`);
+    const imageRef = storageRef.child(`comanda/usuarios/${filename}.jpg`);
     let enviarFotoB64;
 
     reader.onloadend = function() {
