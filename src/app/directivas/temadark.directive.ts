@@ -9,9 +9,11 @@ export class TemadarkDirective {
 
   ngOnInit(): void {
 
-    this.renderer.setElementStyle( this.element.nativeElement, 'color', '#fff');
-    this.renderer.setElementStyle( this.element.nativeElement, 'text-shadow', '1px 0 black, 0 1px black, 1px 0 black, 0 -1px black');
-    this.renderer.setElementStyle( this.element.nativeElement,  'background-color', '#343a40')
+    this.renderer.setElementStyle( this.element.nativeElement, 'color', 'black');
+    // this.renderer.setElementStyle( this.element.nativeElement, 'text-shadow', '1px 0 black, 0 1px black, 1px 0 black, 0 -1px black');
+    // this.renderer.setElementStyle( this.element.nativeElement,  'background-color', '#343a40')
+    this.renderer.setElementStyle( this.element.nativeElement,  'background-color', 'lightgrey')
+
 
     this.renderer.setElementStyle( this.element.nativeElement, 'font-family', "Roboto Slab, serif");
   

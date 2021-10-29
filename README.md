@@ -2,8 +2,10 @@
 
    Link al form https://forms.gle/nauVzL5CmyP3rkLG6
 
-# VOT-AR
-## GRUPO 10 POLLOLA GRAZIANO PEREZ
+
+# SISTEMA VOT.AR
+## GRUPO 10
+
 
 ## Tecnologías utilizadas:
 - Angular 8

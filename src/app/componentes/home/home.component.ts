@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit {
     // { img: "./assets/images/uthappizza.png" },  
     // { img: "./assets/images/interior.jpg" },  
     // { img: "./assets/images/buffet.png" }  
-    { img: "./assets/images/uthappizza.png" },  
-    { img: "./assets/images/interior.jpg" },  
-    { img: "./assets/images/buffet.png" }  
+    { img: "./assets/images/yoelijovotar2.png" },
+    { img: "./assets/images/UrnaVoto.jpg" },
+    { img: "./assets/images/yoelijovotar3.png" }
+
     // { img: "../assets/images/4.jpg" },  
     // { img: "../assets/images/5.jpg" },  
     // { img: "../assets/images/6.jpg" },  

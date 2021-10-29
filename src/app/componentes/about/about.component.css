@@ -9,11 +9,11 @@
 .enmarcada{
   position: relative;
   border-radius: 50%;
-  margin:10px; /* distancia entre el borde y el contenido */
-  width:130px; /* el ancho de la img */
+  margin:30px; /* distancia entre el borde y el contenido */
+  width:200px; /* el ancho de la img */
   border-radius:150px;
   border:5px solid #666;
-  height: 120px; 
+  height: 150px; 
 }
 
 .imgback{
@@ -35,15 +35,19 @@
 .card{
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 131%;
 }
-.card-text{
-    font-family: 'McLaren', cursive;
-}
+/* .card-text{
+    
+} */
 
-.card-title{
+/* .card-title{
     font-family: 'Skranji', cursive;
-}
+} */
 
-.algd{
+.algd, dl{
+    /* text-align: center; */
+    font-size: 115%; 
     margin-bottom: 30%;
 }

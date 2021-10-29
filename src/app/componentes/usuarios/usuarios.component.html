@@ -2,16 +2,16 @@
 
 <body>
 <div class="row">
-    <div class=" col-sm-3">
+    <div class=" col shadow-lg p-4  bg-dark rounded border border-dark">
       <br>
-        <h3 letraYcolor>Nuevo empleado</h3>
+        <h3 letraYcolor>Nuevo usuario</h3>
         <hr style="border-color: white;">
       <form [formGroup]="registroForm" >
         <div class="form-group">
-          <input Temadark class="form-control" placeholder="Email" type="email" id="email"  name="email" [formControl]="email" required
+          <input class="form-control" placeholder="Email" type="email" id="email"  name="email" [formControl]="email" required
           pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"><br>
           <p letraYcolor *ngIf="usuarioRegistrado">Usuario ya utilizado.</p><br>
-          <input Temadark class="form-control" placeholder="Clave" type="password"  name="clave"  [formControl]="clave" required><br>
+          <input class="form-control" placeholder="Clave" type="password"  name="clave"  [formControl]="clave" required><br>
     
           <!-- <input type="text" class="form-control input-ingreso" placeholder="Perfil"  name="perfil"  [formControl]="perfil" required><br> -->
     
@@ -27,7 +27,7 @@
             </mat-select>
           </mat-form-field> -->
           <!-- formControlName="perfil"  -->
-          <select Temadark class="form-control" formControlName="perfil" >
+          <select class="form-control" formControlName="perfil" >
               <option [ngValue]="null" hidden disabled>Seleccione perfil</option>
               <option *ngFor="let perfil of perfiles" [ngValue]="perfil.name">
                   {{ perfil.name }}
@@ -59,14 +59,14 @@
                 <ul style="margin-left: 10%;" >
                   
                     <input type="radio" id="sexoh" name="sexo" formControlName="sexo" value="hombre" id="one" checked />
-                    <label for="one">HOMBRE</label>
+                    <label style="color: white;" for="one">HOMBRE</label>
                     
                     <div class="check"></div>
                
                   <br>
                   
                     <input type="radio" id="sexom" name="sexo" formControlName="sexo" value="mujer" id="two" />
-                    <label for="two">MUJER</label>
+                    <label style="color: white;" for="two">MUJER</label>
                     
                     <div class="check"></div>
                   
@@ -87,7 +87,7 @@
 
 
             
-            <button (click)="IngresarUsuario()" class="btn btn-success col-sm-12" [disabled]="!registroForm.valid">Agregar</button>
+            <button (click)="IngresarUsuario()" class="btn btn-success btn-lg col-sm-12" [disabled]="!registroForm.valid">Agregar</button>
           <br><br>
           <p letraYcolor *ngIf="agregOK" style="text-align: center;">Usuario agregado</p>
           <p letraYcolor *ngIf="eliminOK" style="text-align: center;">Usuario eliminado</p>
@@ -100,9 +100,9 @@
     
     </div>
     
-    <div class="mat-elevation-z8 col-sm-7" style="color:black; background: rgba(119, 136, 153, 0.481);">
+    <div class="mat-elevation-z8 col-8 border border-dark" style="color:black; background: rgba(119, 136, 153, 0.481);">
       <br>
-        <h3 letraYcolor>Lista de empleados</h3>
+        <h3 letraYcolor>Lista de usuarios</h3>
         <hr style="border-color: white;">
         <!-- <table mat-table [dataSource]="listaUsuarios" class="lessons-table mat-elevation-z8" style="align-content: center;">
       
@@ -181,7 +181,7 @@
                    </tbody>
                   </table>
 
-        <button class="btn btn-dark btn-block" (click)="descarga()"><i class="fa fa-cloud-download"></i> Descargar informacion empleados</button>
+        <button class="btn btn-info btn-block btn-lg" (click)="descarga()"><i class="fa fa-cloud-download"></i> Descargar detalle lista de usuarios</button>
         <br>
       </div>
     

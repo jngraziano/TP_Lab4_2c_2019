@@ -5,23 +5,23 @@
     <div class="row ">
 <div class="form-ingreso" style="text-align: center; width: 100%;">
   <br>      
-  <h3 letraYcolor >Ingrese Nro de pedido </h3><br>
+  <h3 letraYcolor >Ingrese Documento Nacional de Identidad  </h3><br>
   <div class="form-goup">
-  <input Temadark  type="text" class="form-control" style="text-align: center;" [(ngModel)]="idPedido" placeholder="Pedido" > <br><br>
-  <button class="btn btn-dark btn-block" (click)="TraerTiempo()" >Traer</button>
+  <input Temadark  type="text" class="form-control form-control-lg" style="text-align: center;" [(ngModel)]="idPedido" placeholder="DNI / CI / LE / LC" > <br><br>
+  <button class="btn btn-dark btn-block btn-lg" (click)="TraerTiempo()" >Ingresar</button>
 </div>
 </div>
     </div>
     <br>
 
-<div class="row">
+<!-- <div class="row"> -->
   <!-- <div class="info-cliente col-sm-8"> -->
     <h1 *ngIf="idPedido" letraYcolor>
-      Pedido seleccionado: {{idPedido}}
+      DNI ingresado: {{idPedido}}
     </h1>
    
-    
-       <table *ngIf="detalles" mat-table [dataSource]="detalles" class="lessons-table mat-elevation-z8" style="align-content: center;">
+    <mat-card>
+       <table *ngIf="detalles" mat-table [dataSource]="detalles" class="mat-elevation-z8 border border-dark" style="color:black; background: rgba(119, 136, 153, 0.481); align-content: center;">
      
             <!-- Position Column -->
             <ng-container matColumnDef="nroPedido">
@@ -47,7 +47,8 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
-  </div>
+        </mat-card>
+  <!-- </div> -->
   <br><br>
   <div *ngIf="isLoading" class="d-flex justify-content-center">
     <div class="spinner-border" role="status">

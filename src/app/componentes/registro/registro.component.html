@@ -2,25 +2,26 @@
 
 <body >
 
-<div class="divMayor">
+<div class="divMayor shadow-lg mb-5 bg-dark rounded border border-dark ">
   <br>
-<h3 letraYcolor style="text-align: center;">Nuevo usuario</h3>
-<hr style="border-color: white;">
-<div class="form-group ">
+<h2 >Nuevo votante</h2>
+<hr style="border-color: black;">
+<div class="form-group " style="text-align: center;">
+  <br>
     <label letraYcolor for="username">Usuario</label>
-    <input Temadark type="email" class="form-control " ngModel [email]="true" [(ngModel)]="cuentaRegistro.username" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese mail"
+    <input type="email" Temadark class="form-control form-control-lg" ngModel style="text-align: center;" [email]="true" [(ngModel)]="cuentaRegistro.username" id="username" name="username" aria-describedby="emailHelp" placeholder="Ingrese mail"
      required>
     <small letraYcolor id="emailHelp" class="form-text " *ngIf="usuarioUtilizado">Usuario ya utilizado. </small>
     <small letraYcolor id="emailHelp" class="form-text " *ngIf="emailincompleto">Ingrese email valido. </small>
     
   </div>
-  <div class="form-group">
-    <label letraYcolor for="password">Contraseña</label>
-    <input Temadark type="password" class="form-control"  [(ngModel)]="cuentaRegistro.password" id="password" name="password" placeholder="Ingrese contraseña" required>
+  <div class="form-group" style="text-align: center;">
+    <label  letraYcolor for="password">Contraseña</label>
+    <input type="password" Temadark class="form-control form-control-lg" style="text-align: center;"  [(ngModel)]="cuentaRegistro.password" id="password" name="password" placeholder="Ingrese contraseña" required>
   </div>
-  <div class="form-group">
+  <div class="form-group" style="text-align: center;">
     <label letraYcolor for="passwordR" >Reingrese contraseña</label>
-    <input Temadark type="password" class="form-control"  [(ngModel)]="cuentaRegistro.passwordR" id="passwordR" name="passwordR" placeholder="Reingrese contraseña" required>
+    <input type="password" Temadark class="form-control form-control-lg" style="text-align: center;" [(ngModel)]="cuentaRegistro.passwordR" id="passwordR" name="passwordR" placeholder="Reingrese contraseña" required>
     <small letraYcolor id="emailHelp" class="form-text " *ngIf="contraError">Las contraseñas no coinciden.</small>
     
 </div>
@@ -28,14 +29,14 @@
     <br>
     <!-- [formControl]="sexo" -->
     <div class="form-group">
-        <h4 >Sexo</h4>
+        <h3 >Sexo</h3>
         
         <ul >
           <!-- <li *ngFor="let item of tipoSexo"> -->
          
 
             <input type="radio" name="sexo" [(ngModel)]="radioSelected" value="hombre"  id="one" (change)="onItemChange(radioSelected)"/>
-            <label for="one">HOMBRE</label>
+            <label  for="one">HOMBRE</label>
             
             <div class="check"></div>
         
@@ -49,7 +50,7 @@
         </ul>
       </div>
       <label>
-          <span letraYcolor class="file-name" style="margin-left: -30%;">  <i class="fa fa-file-image-o"></i> Has click para seleccionar el avatar</span>
+          <span class="file-name" style="margin-left: -35%;">  <i class="fa fa-file-image-o"></i> Has click para seleccionar el avatar</span>
           
           <input style="opacity:0;" #imageInput
                  type="file"
@@ -69,7 +70,7 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div> -->
-  <button class="btn btn-dark btn-block" (click)="registrarme()">Agregar</button>
+  <button letraYcolor class="btn btn-success btn-block btn-lg" (click)="registrarme()">Agregar</button>
   <br>
   <div *ngIf="isLoading" class="d-flex justify-content-center">
     <div class="spinner-border" role="status">
@@ -77,6 +78,6 @@
     </div>
   </div>
   <br>
-  <label letraYcolor *ngIf="agregado" class="agregado"  style="width: 100%">Usuario Agregado.</label>
+  <label letraYcolor *ngIf="agregado" class="agregado"  style="width: 100%">Votante Agregado.</label>
 </div>
 </body>

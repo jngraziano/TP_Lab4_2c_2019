@@ -2,10 +2,10 @@
 
 .footer {
     font-family: 'Modak', cursive;
-    background-color: #6D6875;
+    background-color: rgb(110,153,170);
     margin: 0px auto;
     padding: 20px 5px;
-    color: blanchedalmond;
+    color: whitesmoke;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   .btn-facebook {
@@ -31,5 +31,21 @@
   .btn-mail {
     color: #fff !important;
     background-color: #512da8 !important;
+  }
+  
+  .enmarcada{
+    position: relative;
+    
+    margin:10px; /* distancia entre el borde y el contenido */
+    width:120px; /* el ancho de la img */
+    border-radius:150px;
+    border:5px solid black;
+    height: 120px; 
+    margin-bottom: 20%;
+    margin-left: 90%;
+  }
+
+  .pnacion{
+    margin-right: 3%;
   }
   

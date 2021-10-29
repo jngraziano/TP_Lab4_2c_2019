@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .full-width {
     width: 95%
 }
@@ -12,8 +14,21 @@
 }
 
 .letra{
-    font-family: 'McLaren', cursive;    
+    /* font-family: 'McLaren', cursive;     */
+    font-family:'Bebas Neue', cursive;
     color: white;
     text-align: center;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+h1{
+    /* color: 'whitesmoke'; */
+    /* text-shadow:'1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'; */
+
+    
+    font-size: 300%;
+    text-decoration: underline white;
+}
+h3{
+    /* font-size: 200%; */
+    text-decoration: underline white;
 }
